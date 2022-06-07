@@ -1,1 +1,2 @@
-# Projetos criados na aula de 3DAW
+# DAW
+Programas e exercícios feitos nas aulas de Desenvolvimento Web em PHP.
