@@ -3,9 +3,6 @@ Repositório público dos projetos que fiz no curso de Análise e Desenvolviment
 
 | SIGLA | MATÉRIA | LING/FERRAM |
 | --- | --- | --- |
+|1FAC 2FPR | PROGRAMAÇÃO | C |
 |2CAW | CONSTRUÇÃO WEB | HTML CSS JS |
 |3DAW | DESENVOLVIMENTO WEB | JS PHP MYSQL |
-|1FAC 2FPR | PROGRAMAÇÃO | C |
-
-
-
