@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albergue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="script.js"></script>
+
+<body onload="listaCliente()">
+    <input type="button" value="Listar Cliente" onclick="location.reload()">
+    <h1>Aluguel de quartos</h1>
+    <table>
+        <tr>
+            <th>NOME</th>
+            <th>ENDERECO</th>
+            <th>POSTALCODE</th>
+            <th>PAÍS</th>
+            <th>CPF</th>
+            <th>PASSAPORTE</th>
+            <th>EMAIL</th>
+            <th>DATA DE NASCIMENTO</th>
+
+        </tr>
+        <tr id="ultimaLinha">
+            <td colspan="7"></td>
+        </tr>
+    </table>
+    <p id="msg"></p>
+
+    <form action="" method="" id="idCliente">
+        <table style="width: 400px;">
+            <tr>
+                <td style="text-align: left;">NOME</td>
+                <td><input type="text" name="nome" id="nome"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">ENDERECO</td>
+                <td><input type="text" name="endereco" id="endereco"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">POSTALCOD</td>
+                <td><input type="text" name="postalcod" id="postalcod"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">PAÍS</td>
+                <td><input type="text" name="pais" id="pais"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">CPF</td>
+                <td><input type="text" name="cpf" id="cpf"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">PASSAPORTE</td>
+                <td><input type="text" name="passaporte" id="passaporte"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">EMAIL</td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">DATA DE NASCIMENTO</td>
+                <td><input type="text" name="datanascimento" id="datanascimento"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Cadastrar" onclick="validarForm()">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
