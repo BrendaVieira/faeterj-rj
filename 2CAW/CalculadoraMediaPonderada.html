@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculadora</title>
+			<meta charset="UTF-8">
+			<meta name="description" content="calculadoras online">
+			<meta name="author" content="Brenda Cardoso">
+	</head>
+	<style>
+    
+        body{
+        background-color: #355C7D;
+        }
+		#CorpoCalc {
+        float:left;
+        text-align:center;
+        background-color: #C06C84;
+        width: 300px;
+        height:250px;
+        border: 4px solid purple;
+        padding: 50px;
+        margin:150px;
+      	}
+        #CorpoCalc2 {
+        float:right;
+        text-align:center;
+        background-color: #C06C84;
+        width: 350px;
+        height: 270px;
+        border: 4px solid purple;
+        padding: 40px;
+        margin:150px;
+      	}
+        h3{
+        color:white;
+        }
+		label{
+        color:white;
+        }
+        input{
+        border-radius: 3px;
+        border-color: transparent;
+		border-radius: 4px;
+        }
+        #operacao{
+        border-radius: 4px;
+        cursor: pointer;
+        }
+        #button{
+		background-color: #706fd3;
+		border-radius: 4px;
+        cursor: pointer;
+		}
+        #resultado, #resultado2{
+        color:white;
+        }
+        
+	</style>
+	
+		<body>
+			<p id="calculadora1"></p>
+				<script type="text/javascript">
+				
+					function calcular() {
+					  var textn1 = document.getElementById('textn1'); //entradas dos valores em texto
+					  var textn2 = document.getElementById('textn2');
+                      var operacao = document.getElementById('operacao');
+
+					  var resultado = document.getElementById('resultado');
+
+					  numero1 = Number(textn1.value); //valores em texto convertidos em números
+					  numero2 = Number(textn2.value);
+
+					  var operador = operacao.value;
+					  if (operador == 'adicao') {
+						var result = numero1 + numero2;
+					  }
+					  if (operador == 'subtracao') {
+						var result = numero1 - numero2;
+					  }
+					  if (operador == 'multiplicacao') {
+						var result = numero1 * numero2;
+					  }
+					  if (operador == 'divisao') {
+						var result = numero1 / numero2;
+					}
+					  resultado.innerHTML = `Resultado: A ${operador} entre ${numero1} e ${numero2} é igual a ${result}`
+					//document.getElementById("resultado").innerHTML += "<p>A " + operador + " entre " + numero1 + " e "+ numero2 + " é igual a " + result + " </p>";
+					}
+				</script>
+
+				<div id="CorpoCalc">
+				  <h3>CALCULADORA<br>DE DOIS VALORES</h3>
+					  <input type="number" name="textn1" id="textn1" placeholder="Primeiro Valor"><br><br>
+					  <input type="number" name="textn2" id="textn2" placeholder="Segundo Valor"><br><br>
+					  <label for="operacao">Selecione a operação:</label><br>
+					  <select name="operacao" id="operacao">
+						<option value="adicao">Adição</option>
+						<option value="subtracao">Subtração</option>
+						<option value="multiplicacao">Multiplicação</option>
+						<option value="divisao">Divisão</option>
+					  </select>
+					<input type="button" id="button" name="calcular" value="Calcular" onclick="calcular()"><br><br>
+					<p id="resultado" name="resultado">Resultado:</p>
+				</div>
+
+                <p id="calculadora2"></p>
+				<script type="text/javascript">
+				
+					function calcularmedia() {
+					  var txtn1 = document.getElementById('txtn1'); //entradas dos valores em texto
+					  var txtn2 = document.getElementById('txtn2');
+					  var txtn3 = document.getElementById('txtn3');
+					  
+					  var peson1 = document.getElementById('peson1'); //entradas dos valores em texto
+					  var peson2 = document.getElementById('peson2');
+					  var peson3 = document.getElementById('peson3');
+					  
+					  var resultado2 = document.getElementById('resultado2');
+
+					  numer1 = Number(txtn1.value); //valores em texto convertidos em números
+					  numer2 = Number(txtn2.value);
+					  numer3 = Number(txtn3.value);
+					  
+					  pn1 = Number(peson1.value); //valores em texto convertidos em números
+					  pn2 = Number(peson2.value);
+					  pn3 = Number(peson3.value);
+					  
+					  var notaPeso1 = numer1*pn1; //calculo nota + peso
+                      var notaPeso2 = numer2*pn2;
+                      var notaPeso3 = numer3*pn3;
+                    
+                      var media = (notaPeso1 + notaPeso2 + notaPeso3) / 3;
+                      /*
+					  if(media >= 6){
+                        document.getElementById("resultado").style.color = "green";
+                    } else if (media < 4){
+                        document.getElementById("resultado").style.color = "red";
+                    } else {
+                        document.getElementById("resultado").style.color = "yellow";
+                    }
+                }
+					  */
+					  resultado2.innerHTML = `Resultado: A média ponderada é igual a ${media}`//, ${notaPeso1}, ${notaPeso2}, ${notaPeso3}`
+
+					//document.getElementById("resultado").innerHTML += "<p>A média ponderada entre " + numero1 + " e "+ numero2 + " é igual a " + result + " </p>";
+					}
+				</script>
+				
+				<div id="CorpoCalc2" name="CorpoCalc2">
+				  <h3>CALCULADORA<br>DE MÉDIA PONDERADA</h3>
+					  <input type="number" name="txtn1" id="txtn1" placeholder="Primeira Nota">
+					  <input type="number" name="peson1" id="peson1" placeholder="Peso"><br><br>
+					  <input type="number" name="txtn2" id="txtn2" placeholder="Segunda Nota">
+                      <input type="number" name="peson2" id="peson2" placeholder="Peso"><br><br>
+					  <input type="number" name="txtn3" id="txtn3" placeholder="Terceira Nota">
+					  <input type="number" name="peson3" id="peson3" placeholder="Peso"><br><br>
+                    <input type="button" id="button" name="calcular2" value="Calcular Média" onclick="calcularmedia()"><br><br>
+					<div id="resultado2" name="resultado2">Resultado:</div>
+				</div>
+				
+		</body>
+</html>

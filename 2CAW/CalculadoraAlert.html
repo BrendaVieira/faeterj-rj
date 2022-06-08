@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculadora</title>
+			<meta charset="UTF-8">
+			<meta name="description" content="calculadora online">
+			<meta name="author" content="Brenda Cardoso">
+	</head>
+	<style>
+		body {
+		background-color:greenblue;
+		}
+	</style>
+		<body>
+			<p id="calculo"></p>
+				<script type="text/javascript">
+					{
+						var numero1, numero2, soma, subtração, divisão, multiplicação;
+						numero1 = parseFloat(prompt("Entre com o primeiro número:"));
+						numero2 = parseFloat(prompt("Entre com o segundo número:"));
+						
+						document.getElementById("calculo").innerHTML = "<h1>Resultado do cálculo</h1>";
+						document.getElementById("calculo").innerHTML += "<p>Primeiro número: " + numero1 + "</p>";
+						document.getElementById("calculo").innerHTML += "<p>Segundo número: " + numero2 + "</p>";
+
+						}
+				</script>
+		</body>
+</html>
